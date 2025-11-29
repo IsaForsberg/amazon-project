@@ -29,6 +29,7 @@ export function renderOrderSummary() {
 
     cartSummaryHTML += `
       <div class="cart-item-container
+        js-cart-item-container
         js-cart-item-container-${matchingProduct.id}">
         <div class="delivery-date">
           Delivery date: ${dateString}
@@ -45,9 +46,10 @@ export function renderOrderSummary() {
             <div class="product-price">
               $${formatCurrency(matchingProduct.priceCents)}
             </div>
-            <div class="product-quantity">
+            <div class="product-quantity
+              js-product-quantity-${matchingProduct.id}">
               <span>
-               Quantity:
+                 Quantity:
           <select class="js-quantity-select" data-product-id="${matchingProduct.id}">
             ${[1,2,3,4,5,6,7,8,9,10].map(num => `
               <option value="${num}" ${num === cartItem.quantity ? 'selected' : ''}>
@@ -55,11 +57,12 @@ export function renderOrderSummary() {
               </option>
             `).join('')}
           </select>
-        </span>
-       <span class="delete-quantity-link link-primary js-delete-link" 
-        data-product-id="${matchingProduct.id}">
-    Delete
-     </span>
+              </span>
+              <span class="delete-quantity-link link-primary js-delete-link
+                js-delete-link-${matchingProduct.id}"
+                data-product-id="${matchingProduct.id}">
+                Delete
+              </span>
             </div>
           </div>
 
@@ -130,7 +133,7 @@ export function renderOrderSummary() {
         );
         container.remove();
 
-        renderPaymentSummary();
+         renderPaymentSummary();
       });
     });
 
@@ -142,9 +145,10 @@ export function renderOrderSummary() {
 
       updateQuantity(productId, newQuantity); 
       renderOrderSummary();
-      renderPaymentSummary();
+
+        renderPaymentSummary();
+      });
     });
-  });
 
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {

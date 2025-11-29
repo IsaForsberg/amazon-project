@@ -29,19 +29,12 @@ products.forEach((product) => {
       </div>
 
       <div class="product-quantity-container">
-        <select>
-          <option selected value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-        </select>
-      </div>
+  <select class="js-quantity-selector" data-product-id="${product.id}">
+    ${[1,2,3,4,5,6,7,8,9,10].map(num => `
+      <option value="${num}" ${num === 1 ? 'selected' : ''}>${num}</option>
+    `).join('')}
+  </select>
+</div>
 
       <div class="product-spacer"></div>
 
@@ -75,9 +68,19 @@ document.querySelectorAll('.js-add-to-cart')
   .forEach((button) => {
     button.addEventListener('click', () => {
       const productId = button.dataset.productId;
-      addToCart(productId);
+
+      // hitta rätt select för denna produkt
+      const select = document.querySelector(`.js-quantity-selector[data-product-id="${productId}"]`);
+      const quantity = Number(select.value);
+
+      // lägg till i cart med rätt quantity
+      for (let i = 0; i < quantity; i++) {
+        addToCart(productId);
+      }
+
       updateCartQuantity();
     });
   });
+
 
 

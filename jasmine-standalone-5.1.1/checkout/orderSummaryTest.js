@@ -26,8 +26,7 @@ describe('test suite: renderOrderSummary', () => {
   it('displays the cart', () => {
     expect(document.querySelectorAll('.js-cart-item-container').length).toEqual(2);
 
-    const html = document.querySelector('.js-order-summary').innerHTML;
-    console.log('Cart HTML:', html);
+    
 
     const select1 = document.querySelector(`.js-product-quantity-${productId1} .js-quantity-select`);
     expect(select1.value).toEqual("2");

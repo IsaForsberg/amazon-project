@@ -70,7 +70,7 @@ xhr.addEventListener('load', ()=>{
 return new Product(productDetails);
 });
 
-console.log('load products');
+
 
 fun();
 });

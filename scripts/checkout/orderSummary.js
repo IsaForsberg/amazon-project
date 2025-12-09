@@ -13,6 +13,7 @@ export function renderOrderSummary() {
     const productId = cartItem.productId;
 
     const matchingProduct = getProduct(productId);
+      console.log('productId from URL:', productId);
 
     const deliveryOptionId = cartItem.deliveryOptionId;
 
@@ -71,11 +72,20 @@ export function renderOrderSummary() {
               Choose a delivery option:
             </div>
             ${deliveryOptionsHTML(matchingProduct, cartItem)}
+            <div class="product-actions">
+            <a href="tracking.html?productId=${matchingProduct.id}">
+              <button class="track-package-button button-secondary">
+                Track package
+              </button>
+            </a>
+          </div>
+
           </div>
         </div>
       </div>
     `;
   });
+
 
   function deliveryOptionsHTML(matchingProduct, cartItem) {
     let html = '';
@@ -160,3 +170,5 @@ export function renderOrderSummary() {
       });
     });
 }
+
+

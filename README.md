@@ -1,65 +1,82 @@
-Amazon Clone – JavaScript Kursprojekt
+Amazon Clone – JavaScript Course Project
+This repository contains my course project where I built an Amazon‑style online store.
+The project is part of my learning journey through a JavaScript course by SuperSimpleDev, where I gradually practiced the fundamentals and then built a complete, functional project.
 
-Detta repo innehåller mitt kursprojekt där jag byggt en **Amazon‑liknande butik**. Projektet är en del av min resa genom en JavaScript‑kurs  av SuperSimpleDev där jag steg för steg tränat på grunderna och sedan byggt upp ett komplett projekt.
+How to Run the Project
+Open amazon.html in your browser to explore the project.
+Here you can:
 
-Starta projektet
-Öppna **`amazon.html`** i webbläsaren för att se projektet.  
-Här kan du:
-- Se produkter laddade från en backend.
-- Lägga till dem i kundvagnen.
-- Se kundvagnsantalet uppdateras direkt.
-- Gå till **Orders** för att se vad som faktiskt ligger i kundvagnen.
-- Klicka på **Track package** för att se spårningsinfo för en specifik produkt.
+View products loaded from a backend
 
----
+Add items to the cart
 
- Vad jag tränat på under kursen
+See the cart quantity update instantly
 
-### Grunder
-- **Numbers & Math** → beräkna priser och totalsummor.  
-- **Strings** → hantera text och produktnamn.  
-- **Variables** → lagra data som `cart` och `productId`.  
-- **Booleans & If‑statements** → logik för att kolla om en produkt redan finns i kundvagnen.  
+Navigate to Orders to view the items currently in your cart
 
-### Funktioner & logik
-- **Functions** → skriva återanvändbara kodblock (`addToCart()`, `updateCartQuantity()`).  
-- **Advanced Functions** → förstå callbacks och asynkron logik.  
+Click Track package to see tracking information for a specific product
 
-### Datahantering
-- **Objects** → representera produkter med egenskaper (`id`, `name`, `priceCents`).  
-- **Arrays & Loops** → loopa igenom kundvagnen för att räkna antal eller rendera orderrader.  
+What I Practiced During the Course
+Fundamentals
+Numbers & Math → calculating prices and totals
 
-### Dynamisk webbutveckling
-- **DOM** → manipulera HTML med JavaScript (t.ex. uppdatera `.cart-quantity`).  
-- **HTML, CSS & JS tillsammans** → bygga en helhet där struktur, stil och logik samspelar.  
-- **Modules** → dela upp koden i filer (`cart.js`, `products.js`, `amazon.js`).  
+Strings → handling text and product names
 
-### Objektorienterad programmering
-- **Classes & Inheritance** → skapa klasser som `Product` och `Clothing`.  
-- **OOP‑tänk** → strukturera koden så att den blir mer organiserad och lätt att bygga vidare på.  
+Variables → storing data such as cart and productId
 
-### Backend & asynkron kod
-- **Promises & fetch** → hämta produkter från API (`supersimplebackend.dev`).  
-- **Async/Await** → skriva asynkron kod på ett mer läsbart sätt.  
+Booleans & If‑statements → logic for checking if a product is already in the cart
 
-### Projektarbete
-- **Amazon‑projektet** → knyter ihop allt:
-  - Dynamisk rendering av produkter.  
-  - Kundvagn med `localStorage`.  
-  - Ordersidan som visar vad som faktiskt ligger i kundvagnen.  
-  - “Track package” som visar rätt produkt.  
-- **Git** → versionshantering för att spara och dela mitt arbete.  
+Functions & Logic
+Functions → writing reusable code blocks (addToCart(), updateCartQuantity())
 
----
+Advanced Functions → understanding callbacks and asynchronous logic
 
- Sammanfattning
-Under kursen har jag gått från **grunderna i JavaScript** till att bygga ett **fungerande mini‑Amazon**.  
-Jag har tränat på att:
-- Tänka i **data och logik**.  
-- Koppla ihop **frontend och backend**.  
-- Strukturera kod med **moduler och klasser**.  
-- Skapa en **användarupplevelse** där kundvagnen och ordersidan speglar användarens val.  
+Data Handling
+Objects → representing products with properties (id, name, priceCents)
 
-Det här projektet visar att jag inte bara lärt mig syntax – jag kan bygga riktiga funktioner och flöden som gör en webbsida levande.
+Arrays & Loops → iterating through the cart to count items or render order rows
 
+Dynamic Web Development
+DOM manipulation → updating HTML with JavaScript (e.g., modifying .cart-quantity)
+
+HTML, CSS & JS together → building a cohesive structure where layout, style, and logic work together
+
+Modules → splitting code into files (cart.js, products.js, amazon.js)
+
+Object‑Oriented Programming
+Classes & Inheritance → creating classes like Product and Clothing
+
+OOP mindset → structuring code to be more organized and scalable
+
+Backend & Asynchronous Code
+Promises & fetch → retrieving products from an API (supersimplebackend.dev)
+
+Async/Await → writing asynchronous code in a cleaner, more readable way
+
+Project Work
+The Amazon project ties everything together:
+
+Dynamic product rendering
+
+Cart functionality with localStorage
+
+An Orders page showing the actual cart contents
+
+A “Track package” page displaying the correct product
+
+Git → version control to save and share my work
+
+Summary
+Throughout the course, I progressed from learning the basics of JavaScript to building a fully functional mini‑Amazon.
+I practiced:
+
+Thinking in terms of data and logic
+
+Connecting frontend and backend
+
+Structuring code with modules and classes
+
+Creating a user experience where the cart and orders reflect real user actions
+
+This project demonstrates that I’ve learned more than just syntax — I can build real features and flows that make a web application come alive.
 ---

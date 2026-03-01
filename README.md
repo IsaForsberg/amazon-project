@@ -1,4 +1,4 @@
-#Amazon Clone – JavaScript Course Project
+# Amazon Clone – JavaScript Course Project
 
 This repository contains my course project where I built an Amazon‑style online store.
 The project is part of my learning journey through a JavaScript course by SuperSimpleDev, where I practiced the fundamentals step by step and eventually built a complete, functional application.
